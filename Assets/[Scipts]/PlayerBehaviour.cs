@@ -15,6 +15,10 @@ public class PlayerBehaviour : MonoBehaviour
     public LayerMask groundLayerMask; // the stuff we can collide with
     public bool isGrounded;
 
+    [Header("Animator")]
+    public Animator animator;
+    public PlayerAnimationState state;
+
     private Rigidbody2D rigid2D;
 
 
@@ -22,6 +26,7 @@ public class PlayerBehaviour : MonoBehaviour
     void Start()
     {
         rigid2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,6 +37,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         Move();
         Jump();
+        AirCheck();
     }
 
     private void Move()
@@ -49,6 +55,13 @@ public class PlayerBehaviour : MonoBehaviour
             var clampXVelocity = Mathf.Clamp(rigid2D.velocity.x, -horizontalSpeed, horizontalSpeed);
 
             rigid2D.velocity = new Vector2(clampXVelocity, rigid2D.velocity.y);
+
+            ChangeAnimation(PlayerAnimationState.RUN);
+        }
+
+        if((isGrounded) && (x == 0))
+        {
+            ChangeAnimation(PlayerAnimationState.IDLE);
         }
     }
 
@@ -68,6 +81,20 @@ public class PlayerBehaviour : MonoBehaviour
         {
             rigid2D.AddForce(Vector2.up * verticalForce, ForceMode2D.Impulse);
         }
+    }
+
+    private void AirCheck()
+    {
+        if(!isGrounded)
+        {
+            ChangeAnimation(PlayerAnimationState.JUMP);
+        }
+    }
+
+    private void ChangeAnimation(PlayerAnimationState playerAnimationState)
+    {
+        state = playerAnimationState;
+        animator.SetInteger("AnimationState", (int)state);
     }
 
     public void OnDrawGizmos()
