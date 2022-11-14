@@ -570,7 +570,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ea59ff0f22ce6834f8182d54d1da4ce7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3059,25 +3059,9 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8816542397589330056, guid: 1a225f2c5c91cac438ca7a1373e9a4f5, type: 3}
-      propertyPath: m_Mass
-      value: 1.7309045
-      objectReference: {fileID: 0}
-    - target: {fileID: 8816542397589330056, guid: 1a225f2c5c91cac438ca7a1373e9a4f5, type: 3}
-      propertyPath: m_UseAutoMass
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8816542397589330058, guid: 1a225f2c5c91cac438ca7a1373e9a4f5, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8816542397589330060, guid: 1a225f2c5c91cac438ca7a1373e9a4f5, type: 3}
-      propertyPath: verticalForce
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 8816542397589330060, guid: 1a225f2c5c91cac438ca7a1373e9a4f5, type: 3}
-      propertyPath: groundLayerMask.m_Bits
-      value: 192
       objectReference: {fileID: 0}
     - target: {fileID: 8816542397589330061, guid: 1a225f2c5c91cac438ca7a1373e9a4f5, type: 3}
       propertyPath: m_RootOrder
