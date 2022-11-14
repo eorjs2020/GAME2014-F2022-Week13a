@@ -8,8 +8,8 @@ public class EnemyController : MonoBehaviour
     [Header("Movement Properties")]
     
     public float horizontalSpeed;
-    public Transform aheadPoint;
     public Transform inFrontPoint;
+    public Transform aheadPoint;    
     public Transform groundPoint; // the origin of the circle
     public float groundRadius; // the size of ths circle
     public LayerMask groundLayerMask; // the stuff we can collide with
@@ -31,11 +31,11 @@ public class EnemyController : MonoBehaviour
         isGroundAhead = Physics2D.Linecast(groundPoint.position, aheadPoint.position, groundLayerMask);
         isGrounded = Physics2D.OverlapCircle(groundPoint.position, groundRadius, groundLayerMask);
         
-        if(isGrounded && isGroundAhead )
+        if(isGrounded && isGroundAhead)
         {
             Move();
         }
-        if(!isGroundAhead || isObstacleAhead)
+        if(isObstacleAhead || !isGroundAhead)
         {
             Flip();
         }
@@ -49,7 +49,7 @@ public class EnemyController : MonoBehaviour
     public void Flip()
     {
         var x = transform.localScale.x * -1.0f;
-        direction *= -0.1f;
+        direction *= -1.0f;
         transform.localScale = new Vector3(x, 1.0f, 1.0f);
     }
 
