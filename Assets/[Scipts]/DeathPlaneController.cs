@@ -9,9 +9,10 @@ public class DeathPlaneController : MonoBehaviour
     public Transform playerSpawnPoints;
 
     public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.name == "Player")
+    {       
+        if (collision.gameObject.name == "Player")
         {
+            
             ReSpawn(collision.gameObject);
         }
     }

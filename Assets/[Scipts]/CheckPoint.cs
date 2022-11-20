@@ -8,7 +8,9 @@ public class CheckPoint : MonoBehaviour
     {
         if(collision.gameObject.name == "Player")
         {
+                        
             FindObjectOfType<DeathPlaneController>().playerSpawnPoints = transform;
+            
 
         }
     }
