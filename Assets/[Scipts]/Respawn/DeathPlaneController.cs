@@ -23,7 +23,7 @@ public class DeathPlaneController : MonoBehaviour
             {
                 ReSpawn(collision.gameObject);
 
-                // Play Death Sound
+                FindObjectOfType<SoundManager>().PlaySoundFX(Sound.DEATH, Chanel.PLAYER_DEATH_FX);
             }
           
         }

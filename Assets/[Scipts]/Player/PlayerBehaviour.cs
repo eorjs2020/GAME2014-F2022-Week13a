@@ -30,7 +30,7 @@ public class PlayerBehaviour : MonoBehaviour
     public float verticalTrheshhold;
 
     private Rigidbody2D rigid2D;
-
+    private SoundManager soundManager;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +41,7 @@ public class PlayerBehaviour : MonoBehaviour
         life = FindObjectOfType<LifeCounterController>();
         deathPlane = FindObjectOfType<DeathPlaneController>();
         LeftStick = (Application.isMobilePlatform) ? GameObject.Find("LeftStick").GetComponent<Joystick>() : null;
+        soundManager = FindObjectOfType<SoundManager>();
     }
 
     private void Update()
@@ -53,6 +54,7 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 healthBarController.ResetHealth();
                 deathPlane.ReSpawn(gameObject);
+                soundManager.PlaySoundFX(Sound.DEATH, Chanel.PLAYER_DEATH_FX);
             }           
         }
 
@@ -110,6 +112,7 @@ public class PlayerBehaviour : MonoBehaviour
         if((isGrounded) && (y > verticalTrheshhold))
         {
             rigid2D.AddForce(Vector2.up * verticalForce, ForceMode2D.Impulse);
+            soundManager.PlaySoundFX(Sound.JUMP, Chanel.PLAYER_SOUND_FX);
         }
     }
 
@@ -139,7 +142,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             healthBarController.TakeDamage(20);
 
-            // TODO : if Live > 0 -> play the "Hurt" sound
+            soundManager.PlaySoundFX(Sound.HURT, Chanel.PLAYER_HURT_FX);
         }
     }
 }
