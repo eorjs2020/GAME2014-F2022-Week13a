@@ -14,4 +14,5 @@ public class GameController : MonoBehaviour
         onScreenContols.SetActive(Application.isMobilePlatform);
     }
 
+
 }

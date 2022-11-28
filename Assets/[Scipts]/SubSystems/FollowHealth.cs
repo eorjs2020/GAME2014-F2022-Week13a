@@ -11,6 +11,7 @@ public struct Target
     public bool y;
 }
 
+[ExecuteInEditMode]
 public class FollowHealth : MonoBehaviour
 {
     public Target target;
