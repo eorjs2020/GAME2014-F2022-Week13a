@@ -1,53 +1,41 @@
 {
     "m_SelectedDeviceId": "emulator-5554",
     "m_SelectedPackage": {
-        "deviceId": "emulator-5554",
-        "name": "ca.gbc.game2014f2202week10a",
-        "processId": 3683,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "emulator-5554",
-            "name": "com.YoStarKR.Arknights",
-            "processId": 4299,
-            "exited": true
-        },
-        {
-            "deviceId": "emulator-5554",
-            "name": "ca.gbc.game2014f2202week10a",
-            "processId": 2815,
-            "exited": true
-        },
-        {
-            "deviceId": "emulator-5554",
-            "name": "ca.gbc.game2014f2202week10a",
-            "processId": 3028,
-            "exited": true
-        },
-        {
-            "deviceId": "emulator-5554",
-            "name": "com.ldmnq.launcher3",
-            "processId": 1747,
-            "exited": false
-        },
-        {
-            "deviceId": "emulator-5554",
-            "name": "ca.gbc.game2014f2202week10a",
-            "processId": 3414,
-            "exited": false
-        },
-        {
-            "deviceId": "emulator-5554",
             "name": "ca.gbc.game2014f2202week10a",
             "processId": 4054,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "emulator-5554",
             "name": "ca.gbc.game2014f2202week10a",
             "processId": 3683,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "ca.gbc.game2014f2202week10a",
+            "processId": 4157,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "ca.gbc.game2014f2202week10a",
+            "processId": 4346,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.ldmnq.launcher3",
+            "processId": 3896,
             "exited": false
         }
     ],

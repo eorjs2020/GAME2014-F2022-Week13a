@@ -7,7 +7,7 @@ public class UIController : MonoBehaviour
 {
     public GameObject miniMap;
 
-    private void Start()
+    private void Awake()
     {
         miniMap = GameObject.Find("MiniMap");
     }
@@ -18,6 +18,6 @@ public class UIController : MonoBehaviour
 
     public void OnYButton_Pressed()
     {
-        miniMap.SetActive(!miniMap.activeInHierarchy);
+        miniMap?.SetActive(!miniMap.activeInHierarchy);
     }
 }

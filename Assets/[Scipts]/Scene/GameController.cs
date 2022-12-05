@@ -18,6 +18,10 @@ public class GameController : MonoBehaviour
         //FindObjectType<SoundManager>().PlayMusic(Sound.MAIN_MUSIC);
 
         miniMap = GameObject.Find("MiniMap");
+        
+    }
+    private void Start()
+    {
         miniMap?.SetActive(false);
     }
 
