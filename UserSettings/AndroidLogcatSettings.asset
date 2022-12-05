@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "emulator-5554",
         "name": "ca.gbc.game2014f2202week10a",
-        "processId": 4054,
+        "processId": 3683,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -42,6 +42,12 @@
             "deviceId": "emulator-5554",
             "name": "ca.gbc.game2014f2202week10a",
             "processId": 4054,
+            "exited": false
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "ca.gbc.game2014f2202week10a",
+            "processId": 3683,
             "exited": false
         }
     ],
